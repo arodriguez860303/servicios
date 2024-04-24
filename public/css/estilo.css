@@ -1,0 +1,226 @@
+.encabezado_docto{
+  text-align: right;
+}
+
+.center_td{
+  text-align: center;
+}
+
+
+.td_total{
+  text-align: right;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.bg-total{
+  background-color: #B5C3C6;
+  font-weight: bold;
+}
+
+.caption {
+   margin-bottom: 1em;
+   font-size: 1.3em;
+   font-weight: bold;
+   text-align: center;
+   color: #333333;
+}
+
+.caption2 {
+   margin-bottom: 1em;
+   font-size: 1.1em;
+   font-weight: bold;
+   text-align: center;
+   color: #333333;
+}
+
+.center_table {
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+#general-table {  
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 11px;
+   margin-bottom: 1.5em;
+   border-spacing: 0;
+}
+
+#general-table td {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+
+#general-table th {
+  border: 1px solid #ddd;
+  background-color: #000;
+  padding: 10px;
+  color: #fff;
+}
+
+ .general-table thead {
+   position: absolute;
+   clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+   padding: 0;
+   border: 0;
+   height: 1px;
+   width: 1px;
+   overflow: hidden;
+}
+
+ .general-table thead th {
+   background-color: #611132;
+   border: 1px solid #fff;
+   font-weight: bold;
+   text-align: center;
+   color: white;
+}
+
+ .general-table tbody, .general-table tr, .general-table th, .general-table td {
+   display: block;
+   padding: 0;
+   white-space: normal;
+}
+
+ .general-table caption {
+   margin-bottom: 1em;
+   font-size: 1em;
+   font-weight: bold;
+   text-align: center;
+}
+
+ .general-table tfoot {
+   font-size: 0.8em;
+   font-style: italic;
+}
+
+ .general-table tbody tr {
+   margin-bottom: 1em;
+}
+ 
+ .general-table tbody tr:last-of-type {
+   margin-bottom: 0;
+}
+ 
+ .general-table tbody th[scope="row"] {
+   background-color: rgba(38, 137, 13, 1);
+   color: white;
+}
+
+
+
+#municipio-table {  
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+   margin-bottom: 1.5em;
+   border-spacing: 0;
+}
+
+#municipio-table td {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+
+#municipio-table th {
+  border: 1px solid #ddd;
+  background-color: #000;
+  padding: 10px;
+  color: #fff;
+}
+
+
+
+ .municipio-table thead {
+   position: absolute;
+   clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+   padding: 0;
+   border: 0;
+   height: 1px;
+   width: 1px;
+   overflow: hidden;
+}
+
+ .municipio-table thead th {
+   background-color: #611132;
+   border: 1px solid #fff;
+   font-weight: bold;
+   text-align: center;
+   color: white;
+}
+
+ .municipio-table tbody, .municipio-table tr, .municipio-table th, .municipio-table td {
+   display: block;
+   padding: 0;
+   white-space: normal;
+}
+
+ .municipio-table caption {
+   margin-bottom: 1em;
+   font-size: 1em;
+   font-weight: bold;
+   text-align: center;
+}
+
+ .municipio-table tfoot {
+   font-size: 0.8em;
+   font-style: italic;
+}
+
+ .municipio-table tbody tr {
+   margin-bottom: 1em;
+}
+ 
+ .municipio-table tbody tr:last-of-type {
+   margin-bottom: 0;
+}
+ 
+ .municipio-table tbody th[scope="row"] {
+   background-color: rgba(38, 137, 13, 1);
+   color: white;
+}
+
+
+table.timecard { 
+  width: 45%;
+  border-collapse: collapse;
+/*  border: 1px solid #fff; 
+  border-style: hidden;
+  color: #333333;*/
+}
+
+table.timecard thead th {
+  padding: 8px;
+  background-color: #611132;
+  font-size: large;
+}
+
+table.timecard thead th#thDay {
+  width: 40%; 
+}
+
+table.timecard thead th#thRegular, table.timecard thead th#thOvertime, table.timecard thead th#thTotal {
+  width: 20%;
+}
+
+table.timecard th, table.timecard td {
+  padding: 3px;
+  border-width: 1px;
+  border-style: solid;/*
+  border-color: #611132 #ccc;*/
+}
+
+table.timecard td {
+  text-align: right;
+}
+
+table.timecard tbody th {
+  text-align: left;
+  font-weight: normal;
+}
+

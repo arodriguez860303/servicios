@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cards{
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+
+.cards h1{
+  font-size: 35px;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.services{
+  display: flex;
+  align-items: center;
+}
+
+.contentC
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid #93784D;
+  border-radius: 4px;
+  transition: all .3s ease;
+}
+
+.contentC .fab{
+  font-size: 70px;
+  margin: 16px 0;
+}
+
+.contentC > *{
+  flex: 1 1 100%;
+}
+
+.contentC:hover{
+  color: white;
+}
+
+.contentC:hover a{
+  border-color: white;
+  background: white;
+}
+
+
+
+
+
+
+
+.content-1:hover{
+  border-color: #620627;
+  background: #620627;
+}
+
+.content-1:hover a{
+  color: #620627;
+  font-weight: bold;
+}
+
+.content-2:hover{
+  border-color: #620627;
+  background: #620627;
+}
+
+.content-2:hover a{
+  color: #620627;
+  font-weight: bold;
+}
+
+.content-3:hover{
+  border-color: #620627;
+  background: #620627;
+}
+
+.content-3:hover a{
+  color: #620627;
+  font-weight: bold;
+}
+
+
+
+
+
+
+.contentC h2{
+  font-size: 18px;
+  margin: 16px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contentC p{
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+}
+
+.contentC a{
+  margin: 22px 0;
+  background: black;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 15px 0;
+  border-radius: 25px;
+  transition: .3s ease;
+}
+
+.contentC a:hover{
+  border-radius: 4px;
+}
+
+@media (max-width: 900px){
+  .services{
+    display: flex;
+    flex-direction: column;
+  }
+}

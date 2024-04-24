@@ -1,0 +1,40 @@
+
+/* Green */
+.success {
+  border-color: #007979;
+  color: #007979;
+  border: 2px #007979 solid;
+}
+
+.success:hover {
+  background-color: #007979;
+  color: white;
+  border: 2px #007979 solid;
+}
+
+/* Grey */
+.inverse {
+  border-color: #171B1F;
+  color: #171B1F;
+  border: 2px #171B1F solid;
+}
+
+.inverse:hover {
+  background-color: #171B1F;
+  color: white;
+  border: 2px #171B1F solid;
+}
+
+
+/* Purple */
+.purple {
+  border-color: #545FA1;
+  color: #545FA1;
+  border: 2px #545FA1 solid;
+}
+
+.purple:hover {
+  background-color: #545FA1;
+  color: white;
+  border: 2px #545FA1 solid;
+}

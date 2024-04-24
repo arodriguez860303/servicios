@@ -1,0 +1,15 @@
+{
+    "lengthMenu": " Mostrar _MENU_ registros",
+    "sZeroRecords":    "No se encontraron resultados",
+    "sInfoEmpty":      "Registros del 0 al 0 de un total de 0 registros",
+    "sInfoFiltered":   "(Total de _MAX_ registros)",
+    "search": "_INPUT_",
+    "searchPlaceholder": "Buscar..",
+    "info": "Pagina <strong>_PAGE_</strong> de <strong>_PAGES_</strong>",
+    "paginate": {
+        "first": "<i class='fa fa-angle-double-left'></i>",
+        "previous": "<i class='fa fa-angle-left'></i>",
+        "next": "<i class='fa fa-angle-right'></i>",
+        "last": "<i class='fa fa-angle-double-right'></i>"
+    }
+}

@@ -1,0 +1,131 @@
+body{
+    font-family: Arial;
+    margin-top: 60px;
+}
+
+.titulo {
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight:bold;
+}
+
+.titulo2 {
+    font-size: 14px;
+    text-align: center;
+    font-weight:bold;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: #333333;
+}
+
+.subtitulo {
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;    
+}
+
+/*Tabla de datos de la declaracion*/
+.table_dts_dec {
+  border-collapse:collapse;
+  border-spacing:0;
+    font-size:  0.6em;
+    width: 100%;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;      
+}
+.td_dec{
+  padding:5px;
+  border: 1px solid #e5e5e5;
+}
+.variable{
+  background:#cbcdce;
+  color:#000;
+}
+
+/*Tabla de datos de la declaracion*/
+.table_informacion {
+  font-size: 0.625em;
+}
+.td_infor{
+  font-weight: bold;
+}
+
+abbr, acronym{
+  border-bottom:1px dotted #333;
+  cursor:help;
+}
+address{
+  color:#333;
+  font-size:.9em;
+}
+
+
+.titulo_modulos {
+  font-size:  0.875em;
+  font-weight:bold;
+  padding: 5px;
+  background-color: #1d2226;
+  border-bottom: 1px solid #999;
+  letter-spacing: .06em;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+
+
+.documentacion-recibida {
+    font-size: .75rem;
+}
+
+div.lblarea {
+    margin-top: 10px;
+    margin-bottom: 5px; 
+    font-weight:bold;   
+    font-size: 12px;
+}
+
+ol.a {
+    list-style-position: outside;
+    font-size: .65rem;
+  }
+
+  ol.a li{
+    font-size: .65rem;
+    text-align: justify;
+  }  
+
+ol {
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+}
+
+p.nota{
+    font-size: .65rem;
+    text-align: justify;
+  } 
+
+.tableContenido {
+    border-collapse: collapse;
+}
+.tableContenido td {
+  padding: 5px;
+  text-align: justify;
+}
+.tableContenido thead td {
+  background-color: #54585d;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 12px;
+  border: 1px solid #54585d;
+}
+.tableContenido tbody td {
+  border: 1px solid #54585d;
+  font-size: 10px;
+}
