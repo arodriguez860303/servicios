@@ -202,7 +202,13 @@
       
 
     <script type="text/javascript">
-        var vuri = window.location.origin + '/servicios-dipris';
+        var vuri = window.location.host;
+          if(vuri == "localhost")
+          {
+            vuri = window.location.origin+"/salud/dipris/public";
+          }else{
+            vuri = window.location.origin + '/';
+          }
 
         $(document).ready(function () {
             @yield('script')       

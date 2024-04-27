@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <title>{{ config('app.name', 'DIPRIS | Plataforma Digital para la Atención de Trámites Administrativos') }}</title>
+    <title><?php echo e(config('app.name', 'DIPRIS | Plataforma Digital para la Atención de Trámites Administrativos')); ?></title>
 
     <meta name="description" content="Constancia de Manejo Higiénico de Alimentos">
     <meta name="author" content="Unidad de Informatica y Desarrollo Digital">
     <meta name="csrf-token" content="<?= csrf_token() ?>">
-    @yield('meta')
+    <?php echo $__env->yieldContent('meta'); ?>
 
     <!-- Icons -->
-    <link rel="shortcut icon" href="{{ asset('template_backend/media/favicons/favicon.png') }}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('template_backend/media/favicons/favicon-192x192.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('template_backend/media/favicons/apple-touch-icon-180x180.png') }}">
+    <link rel="shortcut icon" href="<?php echo e(asset('template_backend/media/favicons/favicon.png')); ?>">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?php echo e(asset('template_backend/media/favicons/favicon-192x192.png')); ?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo e(asset('template_backend/media/favicons/apple-touch-icon-180x180.png')); ?>">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" id="css-main" href="{{ asset('template_backend/css/oneui.min.css') }}">
+    <link rel="stylesheet" id="css-main" href="<?php echo e(asset('template_backend/css/oneui.min.css')); ?>">
 
-    @if(Auth::user()->theme  != '' && Auth::user()->theme  != null)
-      <link rel="stylesheet" id="css-theme" href="{{ asset('template_backend/css/themes/'.Auth::user()->theme.'.min.css') }}">
-    @endif
+    <?php if(Auth::user()->theme  != '' && Auth::user()->theme  != null): ?>
+      <link rel="stylesheet" id="css-theme" href="<?php echo e(asset('template_backend/css/themes/'.Auth::user()->theme.'.min.css')); ?>">
+    <?php endif; ?>
 
-    <link rel="stylesheet" id="css-theme" href="{{ asset('template_backend/js/plugins/sweetalert2/sweetalert2.min.css') }}">
-    <link href="{{ asset('template_backend/css/loader.css') }}" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" id="css-theme" href="<?php echo e(asset('template_backend/js/plugins/sweetalert2/sweetalert2.min.css')); ?>">
+    <link href="<?php echo e(asset('template_backend/css/loader.css')); ?>" type="text/css" rel="stylesheet">
    
     <style type="text/css">
         .bg-dark-arb-light {
@@ -36,7 +36,7 @@
         }        
     </style>
 
-    @yield('css')
+    <?php echo $__env->yieldContent('css'); ?>
   </head>
 
   <body> 
@@ -113,133 +113,133 @@
         <div class="js-sidebar-scroll">
           <div class="content-side">
             <ul class="nav-main">
-              @if(Auth::User()->hasRole(['admin']))
+              <?php if(Auth::User()->hasRole(['admin'])): ?>
               <li class="nav-main-item">
-                <a class="nav-main-link _dashboard" href="{{ route('dashboard.index') }}">
+                <a class="nav-main-link _dashboard" href="<?php echo e(route('dashboard.index')); ?>">
                   <i class="nav-main-link-icon si si-speedometer"></i>
                   <span class="nav-main-link-name">Dashboard</span>
                 </a>
               </li>
-              @endif
+              <?php endif; ?>
               
-              @if(Auth::User()->hasRole(['ventanilla']))
+              <?php if(Auth::User()->hasRole(['ventanilla'])): ?>
               <li class="nav-main-heading">Tramites alimentos</li>
               <li class="nav-main-item">
-                <a class="nav-main-link _proceso" href="{{ route('tramites.proceso') }}">
+                <a class="nav-main-link _proceso" href="<?php echo e(route('tramites.proceso')); ?>">
                   <i class="nav-main-link-icon si si-info"></i>
                   <span class="nav-main-link-name">Proceso</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _observado" href="{{ route('tramites.observados') }}">
+                <a class="nav-main-link _observado" href="<?php echo e(route('tramites.observados')); ?>">
                   <i class="nav-main-link-icon si si-magnifier"></i>
                   <span class="nav-main-link-name">Observados</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _solventado" href="{{ route('tramites.solventados') }}">
+                <a class="nav-main-link _solventado" href="<?php echo e(route('tramites.solventados')); ?>">
                   <i class="nav-main-link-icon si si-magnifier-add"></i>
                   <span class="nav-main-link-name">Solventados</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _aceptado" href="{{ route('tramites.aceptados') }}">
+                <a class="nav-main-link _aceptado" href="<?php echo e(route('tramites.aceptados')); ?>">
                   <i class="nav-main-link-icon si si-like"></i>
                   <span class="nav-main-link-name">Aceptados</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _concluido" href="{{ route('tramites.concluidos') }}">
+                <a class="nav-main-link _concluido" href="<?php echo e(route('tramites.concluidos')); ?>">
                   <i class="nav-main-link-icon si si-check"></i>
                   <span class="nav-main-link-name">Concluidos</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _cancelado" href="{{ route('tramites.cancelados') }}">
+                <a class="nav-main-link _cancelado" href="<?php echo e(route('tramites.cancelados')); ?>">
                   <i class="nav-main-link-icon si si-close"></i>
                   <span class="nav-main-link-name">Cancelados</span>
                 </a>
               </li>
-              @endif
+              <?php endif; ?>
 
-              @if(Auth::User()->hasRole(['ventanilla']))
+              <?php if(Auth::User()->hasRole(['ventanilla'])): ?>
               <li class="nav-main-heading">Tramites hospital</li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _procesoH" href="{{ route('tramites-hospital.proceso') }}">
+                <a class="nav-main-link _procesoH" href="<?php echo e(route('tramites-hospital.proceso')); ?>">
                   <i class="nav-main-link-icon si si-info"></i>
                   <span class="nav-main-link-name">Proceso</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _observadoH" href="{{ route('tramites-hospital.observados') }}">
+                <a class="nav-main-link _observadoH" href="<?php echo e(route('tramites-hospital.observados')); ?>">
                   <i class="nav-main-link-icon si si-magnifier"></i>
                   <span class="nav-main-link-name">Observados</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _solventadoH" href="{{ route('tramites-hospital.solventados') }}">
+                <a class="nav-main-link _solventadoH" href="<?php echo e(route('tramites-hospital.solventados')); ?>">
                   <i class="nav-main-link-icon si si-magnifier-add"></i>
                   <span class="nav-main-link-name">Solventados</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _aceptadoH" href="{{ route('tramites-hospital.aceptados') }}">
+                <a class="nav-main-link _aceptadoH" href="<?php echo e(route('tramites-hospital.aceptados')); ?>">
                   <i class="nav-main-link-icon si si-like"></i>
                   <span class="nav-main-link-name">Aceptados</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _concluidoH" href="{{ route('tramites-hospital.concluidos') }}">
+                <a class="nav-main-link _concluidoH" href="<?php echo e(route('tramites-hospital.concluidos')); ?>">
                   <i class="nav-main-link-icon si si-check"></i>
                   <span class="nav-main-link-name">Concluidos</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _canceladoH" href="{{ route('tramites-hospital.cancelados') }}">
+                <a class="nav-main-link _canceladoH" href="<?php echo e(route('tramites-hospital.cancelados')); ?>">
                   <i class="nav-main-link-icon si si-close"></i>
                   <span class="nav-main-link-name">Cancelados</span>
                 </a>
               </li>
-              @endif
+              <?php endif; ?>
 
 
-              @if(Auth::User()->hasRole(['admin']))              
+              <?php if(Auth::User()->hasRole(['admin'])): ?>              
               <li class="nav-main-heading">Mantenimiento</li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _folios" href="{{ route('folios.index') }}">
+                <a class="nav-main-link _folios" href="<?php echo e(route('folios.index')); ?>">
                   <i class="nav-main-link-icon si si-layers"></i>
                   <span class="nav-main-link-name">Folios</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _eliminar" href="{{ route('admin.tramites.index') }}">
+                <a class="nav-main-link _eliminar" href="<?php echo e(route('admin.tramites.index')); ?>">
                   <i class="nav-main-link-icon si si-trash"></i>
                   <span class="nav-main-link-name">Eliminar Constancias</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _eliminarH" href="{{ route('admin.tramites-hospital.index') }}">
+                <a class="nav-main-link _eliminarH" href="<?php echo e(route('admin.tramites-hospital.index')); ?>">
                   <i class="nav-main-link-icon si si-trash"></i>
                   <span class="nav-main-link-name">Eliminar Diplomas</span>
                 </a>
               </li>
 
               <li class="nav-main-item">
-                <a class="nav-main-link _reportes" href="{{ route('reportes') }}">
+                <a class="nav-main-link _reportes" href="<?php echo e(route('reportes')); ?>">
                   <i class="nav-main-link-icon si si-book-open"></i>
                   <span class="nav-main-link-name">Reportes</span>
                 </a>
@@ -247,12 +247,12 @@
 
               <li class="nav-main-heading">Usuarios</li>
               <li class="nav-main-item">
-                <a class="nav-main-link _usuarios" href="{{ route('usuarios.index') }}">
+                <a class="nav-main-link _usuarios" href="<?php echo e(route('usuarios.index')); ?>">
                   <i class="nav-main-link-icon si si-users"></i>
                   <span class="nav-main-link-name">Usuarios</span>
                 </a>
               </li>              
-              @endif
+              <?php endif; ?>
             </ul>
           </div>
         </div>
@@ -298,13 +298,13 @@
             <!-- Menu usuario -->
             <div class="dropdown d-inline-block ms-2">
               <button type="button" class="btn btn-sm btn-alt-secondary d-flex align-items-center" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="rounded-circle" src="{{ asset('template_backend/media/avatars/avatar10.jpg') }}" alt="Header Avatar" style="width: 21px;">
+                <img class="rounded-circle" src="<?php echo e(asset('template_backend/media/avatars/avatar10.jpg')); ?>" alt="Header Avatar" style="width: 21px;">
                 <span class="d-none d-sm-inline-block ms-2">Adrian</span>
                 <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block opacity-50 ms-1 mt-1"></i>
               </button>
               <div class="dropdown-menu dropdown-menu-md dropdown-menu-end p-0 border-0" aria-labelledby="page-header-user-dropdown">
                 <div class="p-3 text-center bg-body-light border-bottom rounded-top">
-                  <img class="img-avatar img-avatar48 img-avatar-thumb" src="{{ asset('template_backend/media/avatars/avatar10.jpg') }}" alt="">
+                  <img class="img-avatar img-avatar48 img-avatar-thumb" src="<?php echo e(asset('template_backend/media/avatars/avatar10.jpg')); ?>" alt="">
                   <p class="mt-2 mb-0 fw-medium">Adrian</p>
                   <p class="mb-0 text-muted fs-sm fw-medium">Administrador General</p>
                 </div>
@@ -315,11 +315,11 @@
                 </div>
                 <div role="separator" class="dropdown-divider m-0"></div>
                 <div class="p-2">                  
-                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <span class="fs-sm fw-medium">Cerrar sesión</span>
                   </a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      @csrf
+                  <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                      <?php echo csrf_field(); ?>
                   </form>
                 </div>
               </div>
@@ -390,15 +390,15 @@
           <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-center py-2 text-center text-md-start">
             <div class="flex-grow-1 mb-1 mb-md-0">
               <h1 class="h3 fw-bold mb-2">
-                @yield('title')
+                <?php echo $__env->yieldContent('title'); ?>
               </h1>
               <h2 class="h6 fw-medium fw-medium text-muted mb-0">
-                @yield('descripcion')
+                <?php echo $__env->yieldContent('descripcion'); ?>
               </h2>
             </div>
             <div class="mt-3 mt-md-0 ms-md-3 space-x-1">             
               <div class="dropdown d-inline-block">
-                  @yield('buttons')        
+                  <?php echo $__env->yieldContent('buttons'); ?>        
               </div>
             </div>
           </div>
@@ -406,9 +406,9 @@
 
         <!-- Content -->
         <div class="content">
-            @yield('dash-content')
+            <?php echo $__env->yieldContent('dash-content'); ?>
             <div class="block block-rounded">     
-              @yield('content')
+              <?php echo $__env->yieldContent('content'); ?>
             </div>
         </div>
         <!-- Fin Content -->
@@ -432,14 +432,14 @@
     </div>
     <!-- END Page Container --> 
 
-    <script src="{{ asset('template_backend/js/oneui.app.min.js') }}"></script> 
-    <script src="{{ asset('template_backend/js/lib/jquery.min.js') }}"></script> 
-    <script src="{{ asset('backend/tema.js') }}"></script> 
-    <script src="{{ asset('template_backend/js/plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
-    <script src="{{ asset('backend/helpers.js') }}"></script>
-    <script src="{{ asset('template_backend/js/plugins/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
+    <script src="<?php echo e(asset('template_backend/js/oneui.app.min.js')); ?>"></script> 
+    <script src="<?php echo e(asset('template_backend/js/lib/jquery.min.js')); ?>"></script> 
+    <script src="<?php echo e(asset('backend/tema.js')); ?>"></script> 
+    <script src="<?php echo e(asset('template_backend/js/plugins/sweetalert2/sweetalert2.all.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('backend/helpers.js')); ?>"></script>
+    <script src="<?php echo e(asset('template_backend/js/plugins/bootstrap-notify/bootstrap-notify.min.js')); ?>"></script>
 
-    @yield('js')
+    <?php echo $__env->yieldContent('js'); ?>
 
       <script type="text/javascript">
         
@@ -451,11 +451,12 @@
             vuri = window.location.origin + '/';
           }
 
-          /*if({{Auth::user()->dark_mode}} == 1){
+          /*if(<?php echo e(Auth::user()->dark_mode); ?> == 1){
             $('#page-container').addClass('page-header-dark dark-mode');           
           }*/
 
-          @yield('script')
+          <?php echo $__env->yieldContent('script'); ?>
       </script>
   </body>
 </html>
+<?php /**PATH D:\laragon\www\salud\dipris\resources\views/layouts/backend.blade.php ENDPATH**/ ?>

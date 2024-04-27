@@ -9,40 +9,40 @@
         				
         <!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet"> 		
-		<link rel="icon" type="image/png" href="{{ asset('img/icono.ico') }}" sizes="16x16">
+		<link rel="icon" type="image/png" href="<?php echo e(asset('img/icono.ico')); ?>" sizes="16x16">
 
 		<!-- CSS Global Compulsory -->
-		<link href="{{ asset('assets/vendor/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/bootstrap/offcanvas.css') }}" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/bootstrap/bootstrap.min.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/bootstrap/offcanvas.css')); ?>" rel="stylesheet">
         		
 		<!-- CSS Implementing Plugins -->
-		<link href="{{ asset('assets/vendor/icon-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/icon-line-pro/style.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/icon-line/css/simple-line-icons.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/icon-hs/style.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/dzsparallaxer/dzsparallaxer.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/dzsparallaxer/dzsscroller/scroller.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/dzsparallaxer/advancedscroller/plugin.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/animate.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets//vendor/typedjs/typed.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/hamburgers/hamburgers.min.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/fancybox/jquery.fancybox.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/slick-carousel/slick/slick.css') }}" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/icon-awesome/css/font-awesome.min.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/icon-line-pro/style.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/icon-line/css/simple-line-icons.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/icon-hs/style.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/dzsparallaxer/dzsparallaxer.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/dzsparallaxer/dzsscroller/scroller.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/dzsparallaxer/advancedscroller/plugin.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/animate.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets//vendor/typedjs/typed.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/hamburgers/hamburgers.min.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/fancybox/jquery.fancybox.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/vendor/slick-carousel/slick/slick.css')); ?>" rel="stylesheet">
 
-		<link href="{{ asset('assets/css/unify-core.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/css/unify-components.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/css/unify-globals.css') }}" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/css/unify-core.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/css/unify-components.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/css/unify-globals.css')); ?>" rel="stylesheet">
 
-		<link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/css/personalizado.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/css/login.css') }}" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/css/custom.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/css/personalizado.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('assets/css/login.css')); ?>" rel="stylesheet">
 
-		<link href="{{ asset('css/login.css') }}" rel="stylesheet">
-		<link href="{{ asset('css/my-style.css') }}" rel="stylesheet">
+		<link href="<?php echo e(asset('css/login.css')); ?>" rel="stylesheet">
+		<link href="<?php echo e(asset('css/my-style.css')); ?>" rel="stylesheet">
 
-		<link href="{{ asset('template/plugins/sweet-alert/sweetalert.css') }}" rel="stylesheet">
+		<link href="<?php echo e(asset('template/plugins/sweet-alert/sweetalert.css')); ?>" rel="stylesheet">
 		        
-        @yield('styles')
+        <?php echo $__env->yieldContent('styles'); ?>
     </head>
 
     <style>
@@ -67,7 +67,7 @@
         </header>
 					
         <section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll dzsprx-readyall" data-options='{direction: "reverse", settings_mode_oneelement_max_offset: "150"}'>
-            <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-img-hero g-bg-bluegray-opacity-0_1--after" style="height: 100%; background-image: url({{asset('img/banners/salud.jpg')}})";></div>
+            <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-img-hero g-bg-bluegray-opacity-0_1--after" style="height: 100%; background-image: url(<?php echo e(asset('img/banners/salud.jpg')); ?>)";></div>
             <div class="container u-bg-overlay__inner text-center g-py-120" id="principalGrande"></div> 
             <div class="container u-bg-overlay__inner text-center g-py-70" id="principalPeque"></div> 
         </section>
@@ -95,12 +95,12 @@
             <!-- begin #page-container -->
             <div class="container-front">		
                 <div id="content" class="container">                    
-                    @yield('content')
+                    <?php echo $__env->yieldContent('content'); ?>
                 </div>
             </div>
             <!-- end #page-container -->            
             							
-			@yield('contenttt')
+			<?php echo $__env->yieldContent('contenttt'); ?>
 			<br>
 			<div class="container">
 				<div class="note note-default " style="text-align:justify">								
@@ -108,7 +108,7 @@
 						<h5><b>Importante</b></h5>
 						<p class="r-d-5">                            
 							Para el &oacute;ptimo funcionamiento del sistema utiliza las <b>versiones</b> m&aacute;s <b>actualizadas</b> de los siguientes navegadores:							
-							<img src="{{asset('img/iconos/chrome.png')}}"> Google Chrome <img src="{{asset('img/iconos/mozilla.png')}}"> Mozilla Firefox
+							<img src="<?php echo e(asset('img/iconos/chrome.png')); ?>"> Google Chrome <img src="<?php echo e(asset('img/iconos/mozilla.png')); ?>"> Mozilla Firefox
 						</p>
 					</div>
 				</div>
@@ -128,7 +128,7 @@
 				<div class="row">
 								
 					<div class="col-lg-2 col-md-6 g-mb-20 g-mb-0--lg d-none d-sm-none d-md-none d-lg-none d-xl-block">
-                        <img class="img-fluid" src="{{asset('img/logos/salud.png')}}" alt="Logo">
+                        <img class="img-fluid" src="<?php echo e(asset('img/logos/salud.png')); ?>" alt="Logo">
                     </div>
 								
 					<div class="col-md-8 text-center text-md-left g-mb-10 g-mb-0--md d-none d-sm-none d-md-none d-lg-none d-xl-block">
@@ -178,32 +178,32 @@
 			</div>
 		</footer>
 
-		<script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>	        
-		<script src="{{ asset('assets/vendor/jquery-migrate/jquery-migrate.min.js') }}"></script>	        
-		<script src="{{ asset('assets/vendor/popper.js/popper.min.js') }}"></script>	        
-		<script src="{{ asset('assets/vendor/bootstrap/bootstrap.min.js') }}"></script>	     
+		<script src="<?php echo e(asset('assets/vendor/jquery/jquery.min.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/vendor/jquery-migrate/jquery-migrate.min.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/vendor/popper.js/popper.min.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/vendor/bootstrap/bootstrap.min.js')); ?>"></script>	     
 
-		<script src="{{ asset('template/plugins/sweet-alert/sweetalert.min.js') }}"></script>	          
+		<script src="<?php echo e(asset('template/plugins/sweet-alert/sweetalert.min.js')); ?>"></script>	          
 
-		<script src="{{ asset('assets/vendor/hs-megamenu/src/hs.megamenu.js') }}"></script>	        
-		<script src="{{ asset('assets/vendor/dzsparallaxer/dzsparallaxer.js') }}"></script>	        
-		<script src="{{ asset('assets/vendor/dzsparallaxer/dzsscroller/scroller.js') }}"></script>	        
-		<script src="{{ asset('assets/vendor/dzsparallaxer/advancedscroller/plugin.js') }}"></script>	        
-		<script src="{{ asset('assets/vendor/fancybox/jquery.fancybox.min.js') }}"></script>	        
-		<script src="{{ asset('assets/vendor/slick-carousel/slick/slick.js') }}"></script>	
+		<script src="<?php echo e(asset('assets/vendor/hs-megamenu/src/hs.megamenu.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/vendor/dzsparallaxer/dzsparallaxer.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/vendor/dzsparallaxer/dzsscroller/scroller.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/vendor/dzsparallaxer/advancedscroller/plugin.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/vendor/fancybox/jquery.fancybox.min.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/vendor/slick-carousel/slick/slick.js')); ?>"></script>	
 
-		<script src="{{ asset('assets/js/hs.core.js') }}"></script>	        
-		<script src="{{ asset('assets/vendor/typedjs/typed.min.js') }}"></script>	        
-		<script src="{{ asset('assets/js/components/hs.header.js') }}"></script>	        
-		<script src="{{ asset('assets/js/helpers/hs.hamburgers.js') }}"></script>	        
-		<script src="{{ asset('assets/js/components/hs.dropdown.js') }}"></script>	        
-		<script src="{{ asset('assets/js/components/hs.popup.js') }}"></script>	        
-		<script src="{{ asset('assets/js/components/hs.carousel.js') }}"></script>	        
-		<script src="{{ asset('assets/js/components/hs.go-to.js') }}"></script>	
+		<script src="<?php echo e(asset('assets/js/hs.core.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/vendor/typedjs/typed.min.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/js/components/hs.header.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/js/helpers/hs.hamburgers.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/js/components/hs.dropdown.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/js/components/hs.popup.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/js/components/hs.carousel.js')); ?>"></script>	        
+		<script src="<?php echo e(asset('assets/js/components/hs.go-to.js')); ?>"></script>	
 
-		<script src="{{ asset('assets/js/custom.js') }}"></script>	          
+		<script src="<?php echo e(asset('assets/js/custom.js')); ?>"></script>	          
 								
-		@yield('js')
+		<?php echo $__env->yieldContent('js'); ?>
 
 		<script type="text/javascript">       	
             
@@ -234,16 +234,10 @@
         
 
         <script type="text/javascript">
-			var vuri = window.location.host;
-			if(vuri == "localhost")
-			{
-				vuri = window.location.origin+"/salud/dipris/public";
-			}else{
-				vuri = window.location.origin + '/';
-			}
+        	var vuri = window.location.origin + '/servicios-dipris';
 
-        	@yield('script')
+        	<?php echo $__env->yieldContent('script'); ?>
         </script>
 	</body>
     
-</html>
+</html><?php /**PATH D:\laragon\www\salud\dipris\resources\views/layouts/frontend_cuenta.blade.php ENDPATH**/ ?>

@@ -110,6 +110,7 @@
     <script src="{{ asset('js/registro/recuperar_password.js') }}"></script> 
 
     <script type="text/javascript">
+      console.log("login");
       var vuri = window.location.origin + '/constancias-dipris';
       
       $(document).ready(function () {

@@ -43,7 +43,7 @@ class DocumentacionController extends Controller
         $id_documento   = $post["id_documento"];        
         
         $t_registro = T_Registro::find($id_registro);
-        $folder     = '/expedientes/' . date('Y') . '/alimentos/' . $t_registro->curp . '/tmp';
+        $folder     = '/expedientes/' . date('Y') . '/alimentos/' . $t_registro->curp;
 
         $path = substr(Storage::disk('dipris')->getAdapter()->getPathPrefix(), 0, -1) . $folder;
 
@@ -189,7 +189,7 @@ class DocumentacionController extends Controller
         $id_documento   = $post["id_documento"];        
         
         $t_registro = T_Registro::find($id_registro);
-        $folder     = '/expedientes/' . date('Y') . '/hospital/' . $t_registro->curp . '/tmp';
+        $folder     = '/expedientes/' . date('Y') . '/hospital/' . $t_registro->curp;
 
         $path = substr(Storage::disk('dipris')->getAdapter()->getPathPrefix(), 0, -1) . $folder;
 

@@ -15,14 +15,21 @@ class HomeController extends Controller
 
     public function index() 
     { 
-        if(Auth::User()->hasRole(['admin'])) 
+       
+        if(Auth::User()->hasRole(['admin']))
+        {
             return redirect()->route('dashboard.index'); 
-        else if(Auth::User()->hasRole(['usuario']))
+        }else if(Auth::User()->hasRole(['usuario']))
+        {
             return redirect()->route('mis-tramites.index');
-        else if(Auth::User()->hasRole(['hospital']))
+        }else if(Auth::User()->hasRole(['hospital']))
+        {
             return redirect()->route('mis-tramites-hospital.index');
-        else if(Auth::User()->hasRole(['ventanilla']))
+        }else if(Auth::User()->hasRole(['ventanilla']))
+        {
             return redirect()->route('tramites.proceso');
+        }
+            
     }
 
     public function cambiar_tema(Request $vrequest)
